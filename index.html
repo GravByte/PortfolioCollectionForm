@@ -11,7 +11,7 @@
     <h1 align="center"> Portfolio Collection Form </h1>
     <h4 align="center"> Developed by <b>Brandon N</b></h4>
 
-    <!-- A form to collect portfolio data from users including their name, email, and a link to their portfolio. -->
+    <h6>Use this form to collect portfolio data from users including their name, email, and a link to their portfolio, then display it in a table neatly. </h6>
     <form action="submit-form.html" method="post">
         <div id="input-fields">
             <div class="input-set">
@@ -23,12 +23,12 @@
                 <input type="text" name="portfolio[]" required><br><br>
             </div>
         </div>
-        <button type="button" onclick="addFields()">Add More</button><br><br>
+        <!-- <button type="button" onclick="addFields()">Add More</button><br><br> -->
         <input type="submit" value="Submit">
     </form>
 
     <!-- A script to add more input fields to the form. -->
-    <script>
+    <!-- <script>
         function addFields() {
             var inputFields = document.getElementById('input-fields');
             var newInputSet = document.createElement('div');
@@ -42,7 +42,7 @@
                 <input type="text" name="portfolio[]" required><br><br>`;
             inputFields.appendChild(newInputSet);
         }
-    </script>
+    </script> -->
 
 </body>
 </html>
