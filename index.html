@@ -10,5 +10,39 @@
 <body>
     <h1 align="center"> Portfolio Collection Form </h1>
     <h4 align="center"> Developed by <b>Brandon N</b></h4>
+
+    <!-- A form to collect portfolio data from users including their name, email, and a link to their portfolio. -->
+    <form action="submit-form.html" method="post">
+        <div id="input-fields">
+            <div class="input-set">
+                <label for="name">Name:</label><br>
+                <input type="text" name="name[]"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" name="email[]"><br>
+                <label for="portfolio">Portfolio Link:</label><br>
+                <input type="text" name="portfolio[]" required><br><br>
+            </div>
+        </div>
+        <button type="button" onclick="addFields()">Add More</button><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- A script to add more input fields to the form. -->
+    <script>
+        function addFields() {
+            var inputFields = document.getElementById('input-fields');
+            var newInputSet = document.createElement('div');
+            newInputSet.className = 'input-set';
+            newInputSet.innerHTML = `
+                <label for="name">Name:</label><br>
+                <input type="text" name="name[]"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" name="email[]"><br>
+                <label for="portfolio">Portfolio Link:</label><br>
+                <input type="text" name="portfolio[]" required><br><br>`;
+            inputFields.appendChild(newInputSet);
+        }
+    </script>
+
 </body>
 </html>
