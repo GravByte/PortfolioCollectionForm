@@ -12,7 +12,7 @@
     <h4 align="center"> Developed by <b>Brandon N</b></h4>
 
     <h6>Use this form to collect portfolio data from users including their name, email, and a link to their portfolio, then display it in a table neatly. </h6>
-    <form action="submit-form.html" method="post">
+    <form action="submit-form.html" method="get">
         <div id="input-fields">
             <div class="input-set">
                 <label for="name">Name:</label><br>
@@ -20,15 +20,25 @@
                 <label for="email">Email:</label><br>
                 <input type="text" name="email[]"><br>
                 <label for="portfolio">Portfolio Link:</label><br>
-                <input type="text" name="portfolio[]" required><br><br>
+                <input type="text" name="portfolio[]" required><br>
+                <label for="Portfolio Type">Portfolio Type:</label><br>
+                <select name="portfolioType[]" id="portfolioType"><br><br>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Game Development">Game Development</option>
+                    <option value="Art">Art</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Photography">Photography</option>
+                    <option value="Video Production">Video Production</option>
+                    <option value="Other">Other</option>
+                <select><br><br>
             </div>
         </div>
-        <!-- <button type="button" onclick="addFields()">Add More</button><br><br> -->
+        <button type="button" onclick="addFields()">Add More</button><br><br>
         <input type="submit" value="Submit">
     </form>
 
     <!-- A script to add more input fields to the form. -->
-    <!-- <script>
+    <script>
         function addFields() {
             var inputFields = document.getElementById('input-fields');
             var newInputSet = document.createElement('div');
@@ -39,7 +49,17 @@
                 <label for="email">Email:</label><br>
                 <input type="text" name="email[]"><br>
                 <label for="portfolio">Portfolio Link:</label><br>
-                <input type="text" name="portfolio[]" required><br><br>`;
+                <input type="text" name="portfolio[]" required><br>
+                <label for="Portfolio Type">Portfolio Type:</label><br>
+                <select name="portfolioType[]" id="portfolioType"><br><br>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Game Development">Game Development</option>
+                    <option value="Art">Art</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Photography">Photography</option>
+                    <option value="Video Production">Video Production</option>
+                    <option value="Other">Other</option>
+                    <select><br><br>`;
             inputFields.appendChild(newInputSet);
         }
     </script> -->
